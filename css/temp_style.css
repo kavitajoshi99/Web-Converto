@@ -83,12 +83,15 @@ header nav{
 .number_button{
   background: #ffff;
   border:1px solid #cccccc;
+  width : 170px !important ;
 }
 .clear_button{
+  width : 170px !important ;
   background: #ffff;
   border:1px solid #cccccc;
 }
 .oper_button{
+  width : 170px !important ;
   background:#eeeeee;
   border:1px solid #cccccc;
 }

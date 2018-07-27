@@ -52,5 +52,6 @@ $(document).ready(function(){
   }
   var result = function(){
     $("#display").text(ans);
+    
   }
 });
