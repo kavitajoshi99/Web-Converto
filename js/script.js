@@ -5,7 +5,7 @@ $(document).ready(function(){
     $(".number_button").click(function(){
       if(oper == ''){
       value1 +=  $(this).data('val');
-      $("#display").text(value1);
+       display();
       }else{
         value2 += $(this).data('val');
         display();
@@ -18,7 +18,12 @@ $(document).ready(function(){
       display();
     }
   });
-
+  $(".clear_button").click(function(){
+     value1 = '';
+     value2 = '';
+     oper = '';
+     display();
+  });
   var display = function(){
     $("#display").text(value1 + oper + value2);
   }
