@@ -3,6 +3,7 @@ $(document).ready(function(){
   var value2 = '';
   var oper = '';
   var ans = '';
+  var mString = '';
     $(".number_button").click(function(){
       if(oper == ''){
       value1 +=  $(this).data('val');
@@ -17,7 +18,7 @@ $(document).ready(function(){
     if(value1 != ''){
       oper = $(this).data('val');
       display();
-    }
+      }
   });
   $(".clear_button").click(function(){
      value1 = '';
@@ -47,11 +48,32 @@ $(document).ready(function(){
        }
      }
   });
+  $(".delete_button").click(function(){
+    if(oper == '' && value2 == '' && value1 != '' ){
+      mString = value1.substring(0,value1.length-1);
+      value1 = mString;
+      display();
+    }
+    else if( value1 != '' && oper != '' && value2 != '')
+      {
+      mString = value2.substring(0,value2.length-1);
+      value2 = mString;
+      display();
+      }
+    else if( value1 != '' && oper != '' && value2 == '')
+      {
+      mString = oper.substring(0,oper.length-1);
+      oper = mString;
+      display();
+      }
+  });
   var display = function(){
     $("#display").text(value1 + oper + value2);
   }
   var result = function(){
     $("#display").text(ans);
-    
+    value1 = ans ;
+    oper = '';
+    value2 = '';
   }
 });

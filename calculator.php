@@ -26,12 +26,13 @@
                 <td class="number_button"  data-val="1">1</td>
                 <td class="number_button" data-val="2">2</td>
                 <td class="number_button" data-val="3">3</td>
-                <td rowspan="4" class="result_button ">=</td>
+                <td class="delete_button">C</td>
               </tr>
               <tr class="table-row">
                 <td class="number_button" data-val="4">4</td>
                 <td class="number_button" data-val="5">5</td>
                 <td class="number_button" data-val="6">6</td>
+                <td rowspan="3" class="result_button ">=</td>
               </tr>
               <tr class="table-row">
                 <td class="number_button" data-val="7">7</td>

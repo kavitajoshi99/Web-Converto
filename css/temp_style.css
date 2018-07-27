@@ -100,3 +100,8 @@ header nav{
   background:#ff850b;
   border:1px solid #eeeeee;
 }
+  .delete_button{
+    background: #ffff;
+    border:1px solid #cccccc;
+    width : 170px !important ;
+  }
