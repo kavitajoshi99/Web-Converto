@@ -12,6 +12,7 @@
                 <tr class="thead-row">
                   <td colspan="4">
                     <span id="display"></span>
+                    <span id="result"></span>
                   </td>
                 </tr>
               </thead>
