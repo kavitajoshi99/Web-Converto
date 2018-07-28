@@ -4,29 +4,20 @@ $(document).ready(function(){
   var oper = '';
   var ans = '';
     $(".number_button").click(function(){
-      current += $(this).data('val');
-      display();
-      /*
-      if(oper == '' && value2 == ''){
-      value1 +=  $(this).data('val');
-       display();
-      }
-      else if(oper != '' && value1 != ''){
-        value2 += $(this).data('val');
+        current += $(this).data('val');
         display();
-      }
-      */
     });
   $(".oper_button").click(function(){
 
-  /*  if(value1 != ''){
+    if(oper == ''){
       oper = $(this).data('val');
+      memory = current;
+      current = '';
       display();
-    } */
-    oper = $(this).data('val');
-    memory = current;
-    current = '';
-    display();
+    }
+    else if(oper != ''){
+      result();
+    }
   });
   $(".clear_button").click(function(){
      memory = '';
@@ -35,26 +26,12 @@ $(document).ready(function(){
      display();
   });
   $(".result_button").click(function(){
-     if(memory != '' && current != '' && oper != ''){
-       switch(oper){
-         case "+" :
-          ans = parseFloat(memory) + parseFloat(current);
-          result();
-          break;
-          case "-" :
-          ans = memory - current ;
-          result();
-          break;
-          case "x" :
-          ans = memory * current;
-          result();
-          break;
-          case "/" :
-          ans = memory / current;
-          result();
-          break;
-       }
-     }
+    if(current != '' && oper != '' && memory != ''){
+      result();
+    }
+    else{
+      display();
+    }
   });
   $(".delete_button").click(function(){
     if( current != ''){
@@ -67,30 +44,37 @@ $(document).ready(function(){
       ans = '';
     }
     });
-    /*if(memory != '' && oper == '' && current == ''){
-      memory = '';
-      display();
-    }
-    else if(memory != '' && oper != '' && current == '')
-     {
-       oper = '';
-       display();
-     }
-     else if(memory != '' && oper != '' && current == '')
-      {
-        current = '';
-        display();
-      }
 
-  }); */
   var display = function(){
     $('#display').text(current);
   }
-  var result = function(){
+  var result_display = function(){
     $("#display").text(ans);
     current = ans;
     ans = '';
     oper = '';
     memory = '';
+  }
+  var result = function(){
+    if(memory != '' && current != '' && oper != ''){
+      switch(oper){
+        case "+" :
+         ans = parseFloat(memory) + parseFloat(current);
+         result_display();
+         break;
+         case "-" :
+         ans = memory - current ;
+         result_display();
+         break;
+         case "x" :
+         ans = memory * current;
+         result_display();
+         break;
+         case "/" :
+         ans = memory / current;
+         result_display();
+         break;
+      }
+    }
   }
 });
