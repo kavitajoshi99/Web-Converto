@@ -1,10 +1,12 @@
 $(document).ready(function(){
-  var value1 = '';
-  var value2 = '';
+  var memory = '';
+  var current = '';
   var oper = '';
   var ans = '';
-  var mString = '';
     $(".number_button").click(function(){
+      current += $(this).data('val');
+      display();
+      /*
       if(oper == '' && value2 == ''){
       value1 +=  $(this).data('val');
        display();
@@ -13,83 +15,82 @@ $(document).ready(function(){
         value2 += $(this).data('val');
         display();
       }
+      */
     });
   $(".oper_button").click(function(){
 
-    if(value1 != ''){
+  /*  if(value1 != ''){
       oper = $(this).data('val');
       display();
-      }
+    } */
+    oper = $(this).data('val');
+    memory = current;
+    current = '';
+    display();
   });
   $(".clear_button").click(function(){
-     value1 = '';
-     value2 = '';
+     memory = '';
+     current = '';
      oper = '';
      display();
   });
   $(".result_button").click(function(){
-     if(value1 != '' && value2 != '' && oper != ''){
+     if(memory != '' && current != '' && oper != ''){
        switch(oper){
          case "+" :
-          ans = parseFloat(value1) + parseFloat(value2);
+          ans = parseFloat(memory) + parseFloat(current);
           result();
           break;
           case "-" :
-          ans = value1 - value2 ;
+          ans = memory - current ;
           result();
           break;
           case "x" :
-          ans = value1 * value2;
+          ans = memory * current;
           result();
           break;
           case "/" :
-          ans = value1 / value2;
+          ans = memory / current;
           result();
           break;
        }
      }
   });
   $(".delete_button").click(function(){
-  /*  if(oper == '' && value2 == '' && value1 != ''){
-      mString = value1.substring(0,value1.length-1);
-      value1 = mString;
+    if( current != ''){
+      current = '';
       display();
     }
-    else if( value1 != '' && oper != '' && value2 != '')
-      {
-      mString = value2.substring(0,value2.length-1);
-      value2 = mString;
+    else{
+      memory = '';
+      current = '';
+      oper = '';
       display();
-      }
-    else if( value1 != '' && oper != '' && value2 == '')
-      {
-      mString = oper.substring(0,oper.length-1);
-      oper = mString;
-      display();
-      }
-*/
-    if(value1 != '' && oper == '' && value2 == ''){
-      value1 = '';
+
+    }
+    /*if(memory != '' && oper == '' && current == ''){
+      memory = '';
       display();
     }
-    else if(value1 != '' && oper != '' && value2 == '')
+    else if(memory != '' && oper != '' && current == '')
      {
        oper = '';
        display();
      }
-     else if(value1 != '' && oper != '' && value2 == '')
+     else if(memory != '' && oper != '' && current == '')
       {
-        value2 = '';
+        current = '';
         display();
       }
+      */
   });
   var display = function(){
-    $("#display").text(value1 + oper + value2);
+    $("#display").text(current);
   }
   var result = function(){
     $("#display").text(ans);
-    value1 = ans;
+    memory = ans;
     oper = '';
-    value2 = '';
+    current = '';
   }
 });
