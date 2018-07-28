@@ -5,10 +5,11 @@ $(document).ready(function(){
   var ans = '';
   var mString = '';
     $(".number_button").click(function(){
-      if(oper == ''){
+      if(oper == '' && value2 == ''){
       value1 +=  $(this).data('val');
        display();
-      }else{
+      }
+      else if(oper != '' && value1 != ''){
         value2 += $(this).data('val');
         display();
       }
@@ -30,7 +31,7 @@ $(document).ready(function(){
      if(value1 != '' && value2 != '' && oper != ''){
        switch(oper){
          case "+" :
-          ans = parseFloat(value1) + parseFloat(value2) ;
+          ans = parseFloat(value1) + parseFloat(value2);
           result();
           break;
           case "-" :
@@ -49,7 +50,7 @@ $(document).ready(function(){
      }
   });
   $(".delete_button").click(function(){
-    if(oper == '' && value2 == '' && value1 != '' ){
+    if(oper == '' && value2 == '' && value1 != ''){
       mString = value1.substring(0,value1.length-1);
       value1 = mString;
       display();
@@ -66,13 +67,14 @@ $(document).ready(function(){
       oper = mString;
       display();
       }
+
   });
   var display = function(){
     $("#display").text(value1 + oper + value2);
   }
   var result = function(){
     $("#display").text(ans);
-    value1 = ans ;
+    value1 = ans;
     oper = '';
     value2 = '';
   }
