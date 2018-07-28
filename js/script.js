@@ -7,7 +7,7 @@ $(document).ready(function(){
         current += $(this).data('val');
         display();
     });
-  $(".oper_button").click(function(){
+  $(".binary_oper").click(function(){
 
     if(oper == ''){
       oper = $(this).data('val');
@@ -16,7 +16,13 @@ $(document).ready(function(){
       display();
     }
     else if(oper != ''){
-      result();
+      binary_result();
+    }
+  });
+  $(".unary.oper").click(function(){
+    if(oper == '' ){
+      oper = $(this).data('val');
+      display();
     }
   });
   $(".clear_button").click(function(){
@@ -27,7 +33,10 @@ $(document).ready(function(){
   });
   $(".result_button").click(function(){
     if(current != '' && oper != '' && memory != ''){
-      result();
+      binary_result();
+    }
+    else if(memory != '' && oper != '' && current == ''){
+      unary_result();
     }
     else{
       display();
@@ -55,26 +64,37 @@ $(document).ready(function(){
     oper = '';
     memory = '';
   }
-  var result = function(){
-    if(memory != '' && current != '' && oper != ''){
+  var binary_result = function(){
       switch(oper){
         case "+" :
          ans = parseFloat(memory) + parseFloat(current);
+         oper = '';
          result_display();
          break;
          case "-" :
          ans = memory - current ;
+         oper = '';
          result_display();
          break;
          case "x" :
          ans = memory * current;
+         oper = '';
          result_display();
          break;
          case "/" :
          ans = memory / current;
+         oper ='';
          result_display();
          break;
       }
+  }
+  var unary_result = function(){
+    switch(oper){
+      case "%":
+      ans = memory / 100;
+      oper = '';
+      result_display();
+      break;
     }
   }
 });

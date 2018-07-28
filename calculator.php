@@ -17,16 +17,16 @@
                 </tr>
               </thead>
               <tr class="table-row">
-                <td class="oper_button" data-val="+">+</td>
-                <td class="oper_button" data-val="-">-</td>
-                <td class="oper_button" data-val="x">x</td>
-                <td class="oper_button" data-val="/">/</td>
+                <td class="binary_oper" data-val="+">+</td>
+                <td class="binary_oper" data-val="-">-</td>
+                <td class="binary_oper" data-val="x">x</td>
+                <td class="binary_oper" data-val="/">/</td>
               </tr>
               <tr class="table-row">
                 <td class="number_button"  data-val="1">1</td>
                 <td class="number_button" data-val="2">2</td>
                 <td class="number_button" data-val="3">3</td>
-                <td class="oper_button" data-val="%">%</td>
+                <td class="unary_oper" data-val="%">%</td>
               </tr>
               <tr class="table-row">
                 <td class="number_button" data-val="4">4</td>

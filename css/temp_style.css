@@ -90,7 +90,12 @@ header nav{
   background: #ffff;
   border:1px solid #cccccc;
 }
-.oper_button{
+.binary_oper{
+  width : 170px !important ;
+  background:#eeeeee;
+  border:1px solid #cccccc;
+}
+.unary_oper{
   width : 170px !important ;
   background:#eeeeee;
   border:1px solid #cccccc;
