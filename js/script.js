@@ -64,10 +64,9 @@ $(document).ready(function(){
     else{
       memory = '';
       current = '';
-      oper = '';
-      display();
-
+      ans = '';
     }
+    });
     /*if(memory != '' && oper == '' && current == ''){
       memory = '';
       display();
@@ -82,15 +81,16 @@ $(document).ready(function(){
         current = '';
         display();
       }
-      */
-  });
+
+  }); */
   var display = function(){
-    $("#display").text(current);
+    $('#display').text(current);
   }
   var result = function(){
     $("#display").text(ans);
-    memory = ans;
+    current = ans;
+    ans = '';
     oper = '';
-    current = '';
+    memory = '';
   }
 });
