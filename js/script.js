@@ -50,7 +50,7 @@ $(document).ready(function(){
      }
   });
   $(".delete_button").click(function(){
-    if(oper == '' && value2 == '' && value1 != ''){
+  /*  if(oper == '' && value2 == '' && value1 != ''){
       mString = value1.substring(0,value1.length-1);
       value1 = mString;
       display();
@@ -67,7 +67,21 @@ $(document).ready(function(){
       oper = mString;
       display();
       }
-
+*/
+    if(value1 != '' && oper == '' && value2 == ''){
+      value1 = '';
+      display();
+    }
+    else if(value1 != '' && oper != '' && value2 == '')
+     {
+       oper = '';
+       display();
+     }
+     else if(value1 != '' && oper != '' && value2 == '')
+      {
+        value2 = '';
+        display();
+      }
   });
   var display = function(){
     $("#display").text(value1 + oper + value2);
