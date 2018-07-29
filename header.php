@@ -25,7 +25,7 @@
                 <li class="nav-item active frontend-nav-item menu-container ">
                   <a class="nav-link frontend-nav-link" href="#">HOME</a>
                 </li>
-                <li class="nav-item frontend-nav-item menu-content-container ">
+                <li class="nav-item active frontend-nav-item menu-container ">
                   <a class="nav-link frontend-nav-link" href="#">CALCULATOR</a>
                 </li>
                 <li class="nav-item frontend-nav-item menu-content-container ">

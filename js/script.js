@@ -108,6 +108,11 @@ $(document).ready(function(){
       temp_memory = '';
       result_display();
       break;
+      case "square" :
+      ans = (temp_memory * temp_memory);
+      temp = '';
+      result_display();
     }
   }
+
 });
