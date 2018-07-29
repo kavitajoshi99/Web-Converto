@@ -5,9 +5,16 @@ $(document).ready(function(){
   var oper = '';
   var temp = '';
   var ans = '';
+  var maxlength = '20';
     $(".number_button").click(function(){
+      if(current.length < maxlength){
         current += $(this).data('val');
         display();
+      }
+      else{
+        current = "Error";
+        display();
+      }
     });
   $(".binary_oper").click(function(){
 
@@ -96,7 +103,7 @@ $(document).ready(function(){
   var unary_result = function(){
     switch(temp){
       case "%":
-      ans = temp_memory / 100;
+      ans = (temp_memory / 100).toFixed(2);
       temp = '';
       temp_memory = '';
       result_display();
