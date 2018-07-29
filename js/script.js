@@ -1,7 +1,9 @@
 $(document).ready(function(){
   var memory = '';
+  var temp_memory = '';
   var current = '';
   var oper = '';
+  var temp = '';
   var ans = '';
     $(".number_button").click(function(){
         current += $(this).data('val');
@@ -19,10 +21,18 @@ $(document).ready(function(){
       binary_result();
     }
   });
-  $(".unary.oper").click(function(){
+  $(".unary_oper").click(function(){
     if(oper == '' ){
-      oper = $(this).data('val');
-      display();
+      temp = $(this).data('val');
+      temp_memory = current ;
+      current = '';
+      unary_result();
+    }
+    else if(oper != ''){
+      temp = $(this).data('val');
+      temp_memory = current;
+      current = '';
+      unary_result();
     }
   });
   $(".clear_button").click(function(){
@@ -32,14 +42,11 @@ $(document).ready(function(){
      display();
   });
   $(".result_button").click(function(){
-    if(current != '' && oper != '' && memory != ''){
+    if(oper != '' && temp == ''){
       binary_result();
     }
-    else if(memory != '' && oper != '' && current == ''){
+    else if(temp != ''){
       unary_result();
-    }
-    else{
-      display();
     }
   });
   $(".delete_button").click(function(){
@@ -61,8 +68,6 @@ $(document).ready(function(){
     $("#display").text(ans);
     current = ans;
     ans = '';
-    oper = '';
-    memory = '';
   }
   var binary_result = function(){
       switch(oper){
@@ -89,10 +94,11 @@ $(document).ready(function(){
       }
   }
   var unary_result = function(){
-    switch(oper){
+    switch(temp){
       case "%":
-      ans = memory / 100;
-      oper = '';
+      ans = temp_memory / 100;
+      temp = '';
+      temp_memory = '';
       result_display();
       break;
     }
