@@ -7,59 +7,78 @@ $(document).ready(function(){
   var ans = '';
   var maxlength = '20';
     $(".number_button").click(function(){
-      if(current.length < maxlength){
-        current += $(this).data('val');
-        display();
+      if(temp == ''){
+        if(current.length < maxlength){
+          current += $(this).data('val');
+          display_current();
+        }
+        else{
+          current = "Error";
+          display_current();
+        }
       }
-      else{
-        current = "Error";
-        display();
+      else if(temp != ''){
+        if(current.length < maxlength){
+          current += $(this).data('val');
+          display_temp();
+        }
+        else{
+          current = "Error";
+          display_current();
+        }
       }
     });
   $(".binary_oper").click(function(){
 
-    if(oper == ''){
+    if(oper == '' && temp == ''){
       oper = $(this).data('val');
       memory = current;
       current = '';
-      display();
+      display_current();
     }
-    else if(oper != ''){
+    else if(oper != '' && temp == ''){
       binary_result();
     }
   });
   $(".unary_oper").click(function(){
-    if(oper == '' ){
+    if(oper == '' && current != '' ){
       temp = $(this).data('val');
       temp_memory = current ;
       current = '';
       unary_result();
     }
-    else if(oper != ''){
+    else if(oper != '' && current != ''){
       temp = $(this).data('val');
       temp_memory = current;
       current = '';
       unary_result();
     }
   });
+  $(".math_fun").click(function(){
+    temp = $(this).data('val');
+    display_temp();
+  });
   $(".clear_button").click(function(){
      memory = '';
      current = '';
      oper = '';
-     display();
+     display_current();
   });
   $(".result_button").click(function(){
-    if(oper != '' && temp == ''){
+    if(oper != '' && temp == '' && math_temp == ''){
       binary_result();
     }
-    else if(temp != ''){
+    else if(temp != '' && math_temp == ''){
       unary_result();
+    }
+    else if(math_temp != ''){
+      math_oper();
     }
   });
   $(".delete_button").click(function(){
     if( current != ''){
       current = '';
-      display();
+      display_current();
     }
     else{
       memory = '';
@@ -68,9 +87,14 @@ $(document).ready(function(){
     }
     });
 
-  var display = function(){
+  var display_current = function(){
     $('#display').text(current);
   }
+  var display_temp = function(){
+    $('#display').text(temp + current);
+    math_temp = temp + current;
+
+    }
   var result_display = function(){
     $("#display").text(ans);
     current = ans;
@@ -112,7 +136,19 @@ $(document).ready(function(){
       ans = (temp_memory * temp_memory);
       temp = '';
       result_display();
+      break;
+
     }
   }
-
+var math_oper = function(){
+  switch(temp){
+    case "sin":
+    ans = Math.abs(Math.sin(current).toFixed(2));
+    temp = '';
+    current = '';
+    math_temp = '';
+    result_display();
+    break;
+  }
+}
 });

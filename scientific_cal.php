@@ -15,31 +15,31 @@
           </tr>
         </thead>
         <tr class="table-row">
-          <td class="unary_oper" data-val="sin">sin</td>
-          <td class="unary_oper" data-val="cos">cos</td>
-          <td class="unary_oper" data-val="tan">tan</td>
-          <td class="unary_oper" data-val="log">log</td>
-          <td class="unary_oper" data-val="ln">ln</td>
+          <td class="math_fun" data-val="sin">sin</td>
+          <td class="math_fun" data-val="cos">cos</td>
+          <td class="math_fun" data-val="tan">tan</td>
+          <td class="math_fun" data-val="log">log</td>
+          <td class="math_fun" data-val="ln">ln</td>
         </tr>
         <tr class="table-row">
           <td class="binary_oper" data-val="+">+</td>
           <td class="binary_oper" data-val="-">-</td>
           <td class="binary_oper" data-val="x">x</td>
           <td class="binary_oper" data-val="/">/</td>
-          <td class="unary_oper" data-val="log2">log<sub>2<sub></td>
+          <td class="math_fun" data-val="log2">log<sub>2<sub></td>
         </tr>
         <tr class="table-row">
           <td class="number_button"  data-val="1">1</td>
           <td class="number_button" data-val="2">2</td>
           <td class="number_button" data-val="3">3</td>
           <td class="unary_oper" data-val="%">%</td>
-          <td class="unary_oper" data-val="π">π</td>
+          <td class="math_fun" data-val="π">π</td>
         </tr>
         <tr class="table-row">
           <td class="number_button" data-val="4">4</td>
           <td class="number_button" data-val="5">5</td>
           <td class="number_button" data-val="6">6</td>
-          <td class="unary_oper" data-val="x!">x!</td>
+          <td class="math_fun" data-val="x!">x!</td>
           <td class="delete_button">C</td>
         </tr>
         <tr class="table-row">
