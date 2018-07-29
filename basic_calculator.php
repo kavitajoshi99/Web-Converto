@@ -3,7 +3,7 @@
   include('header.php');
 
 ?>
-      <!-- calculator -->
+      <!-- basic calculator -->
       <div class="container">
         <div class="calculator-container">
           <div class="table-container">

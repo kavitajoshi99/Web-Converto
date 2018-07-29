@@ -6,7 +6,7 @@
     <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    
+
   </head>
   <body>
     <header>
