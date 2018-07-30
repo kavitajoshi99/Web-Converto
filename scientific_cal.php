@@ -22,6 +22,13 @@
           <td class="math_fun" data-val="ln">ln</td>
         </tr>
         <tr class="table-row">
+          <td class="math_fun" data-val="asin">sin<sup>-1</sup></td>
+          <td class="math_fun" data-val="acos">cos<sup>-1</sup></td>
+          <td class="math_fun" data-val="atan">tan<sup>-1</sup></td>
+          <td class="math_fun" data-val="x!">x!</td>
+          <td class="math_fun" data-val="e">e<sup>x</sup></td>
+        </tr>
+        <tr class="table-row">
           <td class="binary_oper" data-val="+">+</td>
           <td class="binary_oper" data-val="-">-</td>
           <td class="binary_oper" data-val="x">x</td>

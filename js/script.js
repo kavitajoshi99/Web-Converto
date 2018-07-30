@@ -111,6 +111,9 @@ $(document).ready(function(){
     current = ans;
     ans = '';
   }
+  var fact(current) =  function(){
+    
+  }
   var binary_result = function(){
       switch(oper){
         case "+" :
@@ -256,6 +259,40 @@ $(document).ready(function(){
         }
         else if(current != ''){
           ans = Math.sqrt(current);
+          temp = '';
+          math_temp  = '';
+          current = '';
+          result_display();
+          break;
+        }
+        case "e":
+        if(current != ''){
+          ans = Math.exp(current);
+          temp = '';
+          math_temp  = '';
+          current = '';
+          result_display();
+          break;
+        }
+        else if(current == ''){
+          ans = 'Error';
+          temp = '';
+          math_temp  = '';
+          current = '';
+          result_display();
+          break;
+        }
+        case "x!":
+        if(current != ''){
+          ans = fact(current);
+          temp = '';
+          math_temp  = '';
+          current = '';
+          result_display();
+          break;
+        }
+        else if(current == ''){
+          ans = 'Error';
           temp = '';
           math_temp  = '';
           current = '';
