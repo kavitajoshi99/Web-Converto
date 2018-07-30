@@ -2,6 +2,7 @@ $(document).ready(function(){
   var memory = '';
   var temp_memory = '';
   var current = '';
+  var temp_current = '1';
   var oper = '';
   var temp = '';
   var ans = '';
@@ -140,15 +141,45 @@ $(document).ready(function(){
 
     }
   }
-var math_oper = function(){
-  switch(temp){
-    case "sin":
-    ans = Math.abs(Math.sin(current).toFixed(2));
-    temp = '';
-    current = '';
-    math_temp = '';
-    result_display();
-    break;
-  }
-}
+    var math_oper = function(){
+      switch(temp){
+        case "sin":
+        temp_current = (current * 0.0174533);
+        ans = Math.sin(temp_current);
+        temp = '';
+        current = '';
+        math_temp = '';
+        result_display();
+        break;
+        case "cos":
+        temp_current = (current * 0.0174533);
+        ans = Math.cos(temp_current);
+        temp = '';
+        current = '';
+        math_temp = '';
+        result_display();
+        break;
+        case "tan":
+        temp_current = (current * 0.0174533);
+        ans = Math.tan(temp_current);
+        temp = '';
+        current = '';
+        math_temp = '';
+        result_display();
+        break;
+        case "π":
+        if(current == ''){
+          ans = Math.PI * temp_current;
+          temp = '';
+          math_temp = '';
+          result_display();
+          break;
+        }
+        else if( current != ''){
+          ans = Math.PI * current;
+          result_display();
+          break;
+        }
+      }
+    }
 });
