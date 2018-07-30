@@ -63,6 +63,8 @@ $(document).ready(function(){
      memory = '';
      current = '';
      oper = '';
+     temp = '';
+
      display_current();
   });
   $(".result_button").click(function(){
@@ -84,7 +86,9 @@ $(document).ready(function(){
     else{
       memory = '';
       current = '';
+      temp = '';
       ans = '';
+      display_current();
     }
     });
 
@@ -94,7 +98,6 @@ $(document).ready(function(){
   var display_temp = function(){
     $('#display').text(temp + current);
     math_temp = temp + current;
-
     }
   var result_display = function(){
     $("#display").text(ans);
@@ -138,7 +141,13 @@ $(document).ready(function(){
       temp = '';
       result_display();
       break;
-
+      case "+/-":
+      ans = temp_memory*(-1);
+      temp = '';
+      math_temp = '';
+      current= '';
+      result_display();
+      break;
     }
   }
     var math_oper = function(){
@@ -177,9 +186,19 @@ $(document).ready(function(){
         }
         else if( current != ''){
           ans = Math.PI * current;
+          temp = '';
+          math_temp = '';
+          current = '';
           result_display();
           break;
         }
+        case "log":
+        ans = Math.log(current);
+        temp = '';
+        math_temp ='';
+        current = '';
+        result_display();
+        break;
       }
     }
 });
