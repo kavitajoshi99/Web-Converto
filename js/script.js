@@ -193,13 +193,56 @@ $(document).ready(function(){
           break;
         }
         case "ln":
+        if(current != ''){
           ans = Math.log(current);
           temp = '';
           math_temp ='';
           current = '';
           result_display();
           break;
-
+        }
+        else{
+          ans = 'Error';
+          temp = '';
+          math_temp ='';
+          current = '';
+          result_display();
+          break;
+        }
+        case "log10":
+        if(current != ''){
+         ans = Math.log10(current);
+         temp = '';
+         math_temp  = '';
+         current = '';
+         result_display();
+         break;
+       }
+       else{
+         ans = 'Error';
+         temp = '';
+         math_temp  = '';
+         current = '';
+         result_display();
+         break;
+       }
+       case "√":
+        if(current == ''){
+          ans = 'Error';
+          temp = '';
+          math_temp  = '';
+          current = '';
+          result_display();
+          break;
+        }
+        else if(current != ''){
+          ans = Math.sqrt(current);
+          temp = '';
+          math_temp  = '';
+          current = '';
+          result_display();
+          break;
+        }
       }
     }
 });
