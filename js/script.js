@@ -6,6 +6,7 @@ $(document).ready(function(){
   var oper = '';
   var temp = '';
   var ans = '';
+  var math_temp ='';
   var maxlength = '20';
     $(".number_button").click(function(){
       if(temp == ''){
@@ -28,6 +29,10 @@ $(document).ready(function(){
           display_current();
         }
       }
+      else if(memory != '' && oper != ''){
+        current += $(this).data('val');
+        display_current();
+      }
     });
   $(".binary_oper").click(function(){
 
@@ -38,6 +43,7 @@ $(document).ready(function(){
       display_current();
     }
     else if(oper != '' && temp == ''){
+      math_temp =  '';
       binary_result();
     }
   });
@@ -57,6 +63,7 @@ $(document).ready(function(){
   });
   $(".math_fun").click(function(){
     temp = $(this).data('val');
+    math_temp = '';
     display_temp();
   });
   $(".clear_button").click(function(){
@@ -64,7 +71,7 @@ $(document).ready(function(){
      current = '';
      oper = '';
      temp = '';
-
+     math_temp = '';
      display_current();
   });
   $(".result_button").click(function(){
@@ -109,21 +116,31 @@ $(document).ready(function(){
         case "+" :
          ans = parseFloat(memory) + parseFloat(current);
          oper = '';
+         math_temp = '';
          result_display();
          break;
          case "-" :
          ans = memory - current ;
          oper = '';
+         math_temp = '';
          result_display();
          break;
          case "x" :
          ans = memory * current;
          oper = '';
+         math_temp = '';
          result_display();
          break;
          case "/" :
          ans = memory / current;
          oper ='';
+         math_temp = '';
+         result_display();
+         break;
+         case "^":
+         ans = Math.pow(memory , current);
+         oper = '';
+         math_temp = '';
          result_display();
          break;
       }
@@ -134,11 +151,13 @@ $(document).ready(function(){
       ans = (temp_memory / 100).toFixed(2);
       temp = '';
       temp_memory = '';
+      math_temp = '';
       result_display();
       break;
       case "square" :
       ans = (temp_memory * temp_memory);
       temp = '';
+      math_temp = '';
       result_display();
       break;
       case "+/-":

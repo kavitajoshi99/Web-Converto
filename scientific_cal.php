@@ -26,13 +26,13 @@
           <td class="binary_oper" data-val="-">-</td>
           <td class="binary_oper" data-val="x">x</td>
           <td class="binary_oper" data-val="/">/</td>
-          <td class="math_fun" data-val="log2">log<sub>2<sub></td>
+          <td class="unary_oper" data-val="%">%</td>
         </tr>
         <tr class="table-row">
           <td class="number_button"  data-val="1">1</td>
           <td class="number_button" data-val="2">2</td>
           <td class="number_button" data-val="3">3</td>
-          <td class="unary_oper" data-val="%">%</td>
+          <td class="binary_oper" data-val="^">^</td>
           <td class="math_fun" data-val="π">π</td>
         </tr>
         <tr class="table-row">
