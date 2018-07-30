@@ -192,13 +192,14 @@ $(document).ready(function(){
           result_display();
           break;
         }
-        case "log":
-        ans = Math.log(current);
-        temp = '';
-        math_temp ='';
-        current = '';
-        result_display();
-        break;
+        case "ln":
+          ans = Math.log(current);
+          temp = '';
+          math_temp ='';
+          current = '';
+          result_display();
+          break;
+
       }
     }
 });
