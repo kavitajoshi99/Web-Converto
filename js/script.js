@@ -4,6 +4,7 @@ $(document).ready(function(){
   var current = '';
   var temp_current = '1';
   var oper = '';
+  var back_oper ='';
   var temp = '';
   var ans = '';
   var math_temp ='';
@@ -66,6 +67,10 @@ $(document).ready(function(){
     math_temp = '';
     display_temp();
   });
+  $(".fact_button").click(function(){
+    back_oper = $(this).data('val');
+    display_backoper();
+  });
   $(".clear_button").click(function(){
      memory = '';
      current = '';
@@ -83,6 +88,9 @@ $(document).ready(function(){
     }
     else if(math_temp != ''){
       math_oper();
+    }
+    else if(back_oper != ''){
+      fun_backoper();
     }
   });
   $(".delete_button").click(function(){
@@ -106,13 +114,22 @@ $(document).ready(function(){
     $('#display').text(temp + current);
     math_temp = temp + current;
     }
+    var display_backoper = function(){
+      $('#display').text(current + back_oper );
+    }
   var result_display = function(){
     $("#display").text(ans);
     current = ans;
     ans = '';
   }
-  var fact(current) =  function(){
-    
+  function fact(value){
+    var fact = '1';
+    var num = value;
+    var i = '1';
+    for(i=1; i<=num; i++){
+        fact = fact*i;
+      }
+    return fact;
   }
   var binary_result = function(){
       switch(oper){
@@ -282,9 +299,16 @@ $(document).ready(function(){
           result_display();
           break;
         }
-        case "x!":
+
+      }
+    }
+    var fun_backoper = function(){
+      switch(back_oper){
+        case "!":
         if(current != ''){
-          ans = fact(current);
+          var result ;
+          result = fact(current);
+          ans = result;
           temp = '';
           math_temp  = '';
           current = '';
@@ -299,6 +323,7 @@ $(document).ready(function(){
           result_display();
           break;
         }
+
       }
     }
 });
