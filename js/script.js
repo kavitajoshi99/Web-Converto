@@ -8,6 +8,7 @@ $(document).ready(function(){
   var temp = '';
   var ans = '';
   var math_temp ='';
+  var radio_val = '0';
   var maxlength = '20';
     $(".number_button").click(function(){
       if(temp == ''){
@@ -80,6 +81,7 @@ $(document).ready(function(){
      display_current();
   });
   $(".result_button").click(function(){
+  
     if(oper != '' && temp == '' && math_temp == ''){
       binary_result();
     }
@@ -92,6 +94,9 @@ $(document).ready(function(){
     else if(back_oper != ''){
       backoper_fun();
     }
+  });
+  $(".radio_button").click(function(){
+    radio_val = $(this).data('val');
   });
   $(".delete_button").click(function(){
     if( current != ''){
