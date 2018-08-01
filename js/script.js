@@ -111,7 +111,7 @@ $(document).ready(function(){
     $('#display').text(current);
   }
   var display_temp = function(){
-    $('#display').text(temp + current);
+    $('#display').text(temp + ' ' + current);
     math_temp = temp + current;
     }
     var display_backoper = function(){
@@ -215,6 +215,7 @@ $(document).ready(function(){
         math_temp = '';
         result_display();
         break;
+
         case "π":
         if(current == ''){
           ans = Math.PI * temp_current;
@@ -299,7 +300,33 @@ $(document).ready(function(){
           result_display();
           break;
         }
-
+        case "sin-1":
+        temp_current = Math.asin(current);
+        ans = (temp_current * 57.2958).toFixed(2);
+        temp_current = '';
+        temp = '';
+        current = '';
+        math_temp = '';
+        result_display();
+        break;
+        case "cos-1":
+        temp_current = Math.acos(current);
+        ans = (temp_current * 57.2958).toFixed(2);
+        temp_current = '';
+        temp = '';
+        current = '';
+        math_temp = '';
+        result_display();
+        break;
+        case "tan-1":
+        temp_current = Math.atan(current);
+        ans = (temp_current * 57.2958).toFixed(2);
+        temp_current = '';
+        temp = '';
+        current = '';
+        math_temp = '';
+        result_display();
+        break;
       }
     }
     var fun_backoper = function(){
