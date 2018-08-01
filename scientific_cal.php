@@ -15,17 +15,23 @@
           </tr>
         </thead>
         <tr class="table-row">
+          <td class="math_fun" data-val="log10">log<sub>10</sub></td>
+          <td class="math_fun" data-val="ln">ln</td>
+          <td class="math_fun" data-val="log2">log<sub>2</sub></td>
+
+        </tr>
+        <tr class="table-row">
           <td class="math_fun" data-val="sin">sin</td>
           <td class="math_fun" data-val="cos">cos</td>
           <td class="math_fun" data-val="tan">tan</td>
-          <td class="math_fun" data-val="log10">log<sub>10</sub></td>
-          <td class="math_fun" data-val="ln">ln</td>
+          <td class="math_fun" data-val="1/">1/x</td>
+          <td class="math_fun" data-val="3√">3√x</td>
         </tr>
         <tr class="table-row">
           <td class="math_fun" data-val="sin-1">sin<sup>-1</sup></td>
           <td class="math_fun" data-val="cos-1">cos<sup>-1</sup></td>
           <td class="math_fun" data-val="tan-1">tan<sup>-1</sup></td>
-          <td class="fact_button" data-val="!">x!</td>
+          <td class="backoper_button" data-val="!">x!</td>
           <td class="math_fun" data-val="e">e<sup>x</sup></td>
         </tr>
         <tr class="table-row">

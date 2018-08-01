@@ -67,7 +67,7 @@ $(document).ready(function(){
     math_temp = '';
     display_temp();
   });
-  $(".fact_button").click(function(){
+  $(".backoper_button").click(function(){
     back_oper = $(this).data('val');
     display_backoper();
   });
@@ -90,7 +90,7 @@ $(document).ready(function(){
       math_oper();
     }
     else if(back_oper != ''){
-      fun_backoper();
+      backoper_fun();
     }
   });
   $(".delete_button").click(function(){
@@ -266,6 +266,40 @@ $(document).ready(function(){
          result_display();
          break;
        }
+       case "log2":
+       if(current != ''){
+        ans = Math.log2(current);
+        temp = '';
+        math_temp  = '';
+        current = '';
+        result_display();
+        break;
+      }
+      else{
+        ans = 'Error';
+        temp = '';
+        math_temp  = '';
+        current = '';
+        result_display();
+        break;
+      }
+      case "3√":
+       if(current == ''){
+         ans = 'Error';
+         temp = '';
+         math_temp  = '';
+         current = '';
+         result_display();
+         break;
+       }
+       else if(current != ''){
+         ans = Math.cbrt(current);
+         temp = '';
+         math_temp  = '';
+         current = '';
+         result_display();
+         break;
+       }
        case "√":
         if(current == ''){
           ans = 'Error';
@@ -327,15 +361,36 @@ $(document).ready(function(){
         math_temp = '';
         result_display();
         break;
+        case "1/":
+        if(current != ''){
+          var result ;
+          result = 1/current;
+          ans = result;
+          result ='';
+          temp = '';
+          math_temp  = '';
+          current = '';
+          result_display();
+          break;
+        }
+        else if(current == ''){
+          ans = 'Error';
+          temp = '';
+          math_temp  = '';
+          current = '';
+          result_display();
+          break;
+        }
       }
     }
-    var fun_backoper = function(){
+    var backoper_fun = function(){
       switch(back_oper){
         case "!":
         if(current != ''){
           var result ;
           result = fact(current);
           ans = result;
+          result = '';
           temp = '';
           math_temp  = '';
           current = '';
