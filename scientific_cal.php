@@ -54,7 +54,7 @@
           <td class="number_button" data-val="8">8</td>
           <td class="number_button" data-val="9">9</td>
           <td class="unary_oper" data-val="square">x<sup>2</sup></td>
-          <td rowspan="3" class="result_button ">=</td>
+          <td rowspan="2" class="result_button ">=</td>
         </tr>
         <tr class="table-row">
           <td class="number_button" data-val=".">.</td>
