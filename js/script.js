@@ -8,7 +8,8 @@ $(document).ready(function(){
   var temp = '';
   var ans = '';
   var math_temp ='';
-  var radio_val = '0';
+  var radio_val = 'degree';
+  var temp_result = '';
   var maxlength = '20';
     $(".number_button").click(function(){
       if(temp == ''){
@@ -81,7 +82,7 @@ $(document).ready(function(){
      display_current();
   });
   $(".result_button").click(function(){
-  
+
     if(oper != '' && temp == '' && math_temp == ''){
       binary_result();
     }
@@ -95,9 +96,16 @@ $(document).ready(function(){
       backoper_fun();
     }
   });
-  $(".radio_button").click(function(){
-    radio_val = $(this).data('val');
+
+  $("#radio_button").click(function(){
+    if (document.getElementById('rad').checked) {
+      radio_val = document.getElementById('rad').value;
+    }
+    else if(document.getElementById('deg').checked){
+      radio_val = document.getElementById('deg').value;
+    }
   });
+  // delete button functionality
   $(".delete_button").click(function(){
     if( current != ''){
       current = '';
@@ -197,7 +205,12 @@ $(document).ready(function(){
     var math_oper = function(){
       switch(temp){
         case "sin":
-        temp_current = (current * 0.0174533);
+        if(radio_val == 'degree'){
+          temp_current = (current * 0.0174533);
+        }
+        else if(radio_val == 'radian'){
+          temp_current = current;
+        }
         ans = Math.sin(temp_current);
         temp = '';
         current = '';
@@ -205,7 +218,12 @@ $(document).ready(function(){
         result_display();
         break;
         case "cos":
-        temp_current = (current * 0.0174533);
+        if(radio_val == 'degree'){
+          temp_current = (current * 0.0174533);
+        }
+        else if(radio_val == 'radian'){
+          temp_current = current;
+        }
         ans = Math.cos(temp_current);
         temp = '';
         current = '';
@@ -213,7 +231,12 @@ $(document).ready(function(){
         result_display();
         break;
         case "tan":
-        temp_current = (current * 0.0174533);
+        if(radio_val == 'degree'){
+          temp_current = (current * 0.0174533);
+        }
+        else if(radio_val == 'radian'){
+          temp_current = current;
+        }
         ans = Math.tan(temp_current);
         temp = '';
         current = '';
@@ -341,16 +364,29 @@ $(document).ready(function(){
         }
         case "sin-1":
         temp_current = Math.asin(current);
-        ans = (temp_current * 57.2958).toFixed(2);
+        if(radio_val == 'degree'){
+        temp_result = (temp_current * 57.2958).toFixed(2);
+        }
+        else if(radio_val == 'radian'){
+          temp_result = temp_current;
+        }
+        ans = temp_result;
         temp_current = '';
         temp = '';
+        temp_result = '';
         current = '';
         math_temp = '';
         result_display();
         break;
         case "cos-1":
         temp_current = Math.acos(current);
-        ans = (temp_current * 57.2958).toFixed(2);
+        if(radio_val == 'degree'){
+        temp_result = (temp_current * 57.2958).toFixed(2);
+        }
+        else if(radio_val == 'radian'){
+          temp_result = temp_current;
+        }
+        ans = temp_result;
         temp_current = '';
         temp = '';
         current = '';
@@ -359,7 +395,13 @@ $(document).ready(function(){
         break;
         case "tan-1":
         temp_current = Math.atan(current);
-        ans = (temp_current * 57.2958).toFixed(2);
+        if(radio_val == 'degree'){
+        temp_result = (temp_current * 57.2958).toFixed(2);
+        }
+        else if(radio_val == 'radian'){
+          temp_result = temp_current;
+        }
+        ans = temp_result;
         temp_current = '';
         temp = '';
         current = '';

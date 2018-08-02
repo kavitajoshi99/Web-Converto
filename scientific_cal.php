@@ -2,7 +2,7 @@
   include('header.php');
  ?>
  <!-- scientific calculator -->
-<div class= "container">
+
   <div class="calculator-container">
     <div class="table-container">
       <table class="table">
@@ -18,9 +18,9 @@
           <td class="math_fun" data-val="log10">log<sub>10</sub></td>
           <td class="math_fun" data-val="ln">ln</td>
           <td class="math_fun" data-val="log2">log<sub>2</sub></td>
-          <td class="radio_button">
-          <input type="radio"  data-val="degree">Degree</td>
-          <td class="radio_button"><input type="radio"  data-val="radian">Radian</td>
+          <td  colspan ='2' id="radio_button">
+          <input type="radio" name="radio_button" id="deg" value="degree" checked>Degree
+          <input type="radio" name= "radio_button" id="rad" value="radian">Radian</td>
         </tr>
         <tr class="table-row">
           <td class="math_fun" data-val="sin">sin</td>
@@ -73,7 +73,6 @@
       </table>
     </div>
   </div>
-</div>
 <?php
  include('footer.php');
 ?>
