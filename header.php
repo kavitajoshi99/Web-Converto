@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>WEB-CALCULATOR</title>
-    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/temp_style.css">
     <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet">
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -29,7 +29,7 @@
                   <a class="nav-link frontend-nav-link" href="scientific_cal.php">CALCULATOR</a>
                 </li>
                 <li class="nav-item frontend-nav-item menu-content-container ">
-                  <a class="nav-link frontend-nav-link" href="#">CONVERTER</a>
+                  <a class="nav-link frontend-nav-link" href="converter.php">CONVERTER</a>
                 </li>
                 <li class="nav-item frontend-nav-item menu-content-container ">
                   <a class="nav-link frontend-nav-link " href="#">EXIT</a>

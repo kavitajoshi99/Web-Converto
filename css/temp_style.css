@@ -122,3 +122,56 @@ header nav{
     border:1px solid #cccccc;
     width : 170px !important ;
   }
+
+/* converter css */
+
+.converter_container{
+  padding:160px;
+}
+
+.converter_menu{
+  width:80%;
+  overflow: hidden;
+}
+
+.converter_menu ul{
+  margin:0px;
+}
+.converter_menu li{
+  display:inline;
+}
+
+.converter_menu a{
+  margin-left:12px;
+  font-size:20px;
+  padding:8px;
+  border: 1px solid #888888;
+  background-color: #dc3545;
+  color:#ffffff !important;
+}
+#convert{
+  padding-left:52px;
+}
+
+#convert td{
+  font-size:20px;
+  padding-left:10px;
+}
+
+.forminput{
+  width:260px;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: 2px 2px 3px #666;
+  font-size: 20px;
+}
+
+.cal-select{
+  padding: 3px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: 2px 2px 3px #666;
+  font-size: 16px;
+
+}
