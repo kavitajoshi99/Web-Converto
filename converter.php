@@ -38,10 +38,10 @@
           </tr>
           <tr>
             <td>
-              <input type='text' name="fromval" style="width:250px" class="forminput" />
+              <input type='text' name="fromval" style="width:250px" class="forminput" id="fromfield"/>
             </td>
             <td>
-              <input type='text' name="toval" style="width:250px" class="forminput" />
+              <input type='text' name="toval" style="width:250px" class="forminput" id="tofield" readonly />
             </td>
           </tr>
           <tr>

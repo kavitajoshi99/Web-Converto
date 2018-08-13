@@ -1,4 +1,7 @@
 $(document).ready(function(){
+
+  // calculator js//
+
   var memory = '';
   var temp_memory = '';
   var current = '';
