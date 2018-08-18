@@ -42,7 +42,7 @@ header nav{
   .frontend-nav-link:hover{
     color: black !important;
   }
-  .navbar-nav{
+  .navbar_nav{
     height: 100px;
     float:right;
     position: relative;
@@ -132,6 +132,7 @@ header nav{
 .converter_menu{
   width:80%;
   overflow: hidden;
+  margin-left: 24px;
 }
 
 .converter_menu ul{
@@ -141,7 +142,7 @@ header nav{
   display:inline;
 }
 
-.converter_menu a{
+.converter_menu button{
   margin-left:12px;
   font-size:20px;
   padding:8px;

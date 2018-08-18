@@ -3,26 +3,28 @@
  ?>
  <div class="converter_container">
     <div class="converter_menu">
-      <ul>
-        <li>
-          <a>Length</a>
-        </li>
-        <li>
-          <a>Temperature</a>
-        </li>
-        <li>
-          <a>Area</a>
-        </li>
-        <li>
-          <a>Volume</a>
-        </li>
-        <li>
-          <a>Weight</a>
-        </li>
-        <li>
-          <a>Time</a>
-        </li>
-      </ul>
+      <nav class="navbar navbar-expand-md">
+          <ul class="navbar-nav">
+            <li class="nav-item active menu_button">
+              <button value="length" id="length">Length</button>
+            </li>
+            <li class="nav-item">
+              <button value="temperature" id="temperature">Temperature</button>
+            </li>
+            <li class="nav-item">
+              <button value="area" id='area'>Area</button>
+            </li>
+            <li class="nav-item">
+              <button value="volume" id="volume">Volume</button>
+            </li>
+            <li class="nav-item">
+              <button value="weight" id="weight">Weight</button>
+            </li>
+            <li class="nav-item">
+              <button value="time" id="time">Time</button>
+            </li>
+          </ul>
+      </nav>
     </div>
     <div id="convert">
       <table style="border:1px solid #000000" class="convert-table">
@@ -46,7 +48,7 @@
           </tr>
           <tr>
             <td style="padding-top:10px">
-              <select name="calfrom" style="width:250px" class="cal-select">
+              <select name="calfrom" style="width:250px" class="cal-select" size="7">
                 <option>Meter</option>
                 <option>Kilometer</option>
                 <option>Centimeter</option>
@@ -57,7 +59,7 @@
               </select>
             </td>
             <td style="padding-top:10px">
-              <select name="calfrom" style="width:250px" class="cal-select">
+              <select name="calto" style="width:250px" class="cal-select" size="7">
                 <option>Meter</option>
                 <option>Kilometer</option>
                 <option>Centimeter</option>
