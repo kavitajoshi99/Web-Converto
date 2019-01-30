@@ -22,8 +22,21 @@ $(document).ready(function(){
   });
 
 
-  $("#fromfield").change(function(){
-    $('#tofield').val($('#fromfield').val());
+  $(document).on('change','.input-change', function(){
+    //$('#tofield').val($('#fromfield').val());
+    $.ajax({
+      url : 'convert_result.php',
+      method: 'post',
+      dataType : 'json',
+      data: {
+        'fromval' : $('#fromfield').val(),
+        'calfrom' : $('#calfrom').val(),
+        'calto'   : $('#calto').val()
+      },
+      success : function(res){
+                    $('#tofield').val(res.result);
+              }
+    });
   });
 
 });
