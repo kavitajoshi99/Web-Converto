@@ -23,16 +23,10 @@
           <nav class="navbar navbar-expand-lg navbar-light frontend-navbar">
             <ul class="navbar-nav menu-container">
                 <li class="nav-item active frontend-nav-item menu-container ">
-                  <a class="nav-link frontend-nav-link" href="home.php">HOME</a>
-                </li>
-                <li class="nav-item active frontend-nav-item menu-container ">
                   <a class="nav-link frontend-nav-link" href="scientific_cal.php">CALCULATOR</a>
                 </li>
                 <li class="nav-item frontend-nav-item menu-content-container ">
                   <a class="nav-link frontend-nav-link" href="converter.php">CONVERTER</a>
-                </li>
-                <li class="nav-item frontend-nav-item menu-content-container ">
-                  <a class="nav-link frontend-nav-link " href="#">EXIT</a>
                 </li>
             </ul>
           </nav>
