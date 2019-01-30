@@ -34,7 +34,12 @@ $(document).ready(function(){
         'calto'   : $('#calto').val()
       },
       success : function(res){
+        if(res.err == 0){
                     $('#tofield').val(res.result);
+                }else{
+                  alert(res.err_msg);
+                }
+                    
               }
     });
   });

@@ -4,9 +4,9 @@ $return = [];
 $err = 0;
 if(empty($_POST['fromval'])){
   $err = 1;
-  $err_msg[] = 'Value is not defined';
+  $err_msg[] = 'value not defined';
 }
-if($err == 0){
+if(is_numeric($_POST['fromval']) && $err ==0){
   $fromval = $_POST['fromval'];
   $calfrom = $_POST['calfrom'];
   $calto   = $_POST['calto'];
@@ -172,7 +172,13 @@ if($err == 0){
     }
   }
 }
+else{
+  $err = 1;
+  $err_msg[] = 'Enter a valid value';
+}
   $return['result'] = $result;
+  $return['err']  = $err;
+  $return['err_msg'] = $err_msg;
 echo json_encode($return);
 die();
 ?>
