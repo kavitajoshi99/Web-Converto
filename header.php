@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>WEB-CALCULATOR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="css/temp_style.css">
     <link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Chela+One" rel="stylesheet">

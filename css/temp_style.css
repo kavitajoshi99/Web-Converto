@@ -5,6 +5,43 @@ body{
   margin:0;
   background-image: url('../images/calculator-bg.jpg');
   background-size: cover;
+
+}
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
 }
 header nav{
   z-index: 999;
@@ -57,9 +94,11 @@ header nav{
 }
 .background-container{
   background: rgba(198, 150, 150, 0.5);
+  background-size:cover;
+  height:100%;
 }
 .calculator-container{
-  padding:100px;
+  padding:20% 0;
 }
 .table-container{
   width:80%;
@@ -75,58 +114,52 @@ header nav{
 }
 .table-row{
   text-align:center;
-  font-size: 25px;
+}
+.table-row td{
+  padding:10%;
 }
 .number_button{
   background: #ffff;
   border:1px solid #cccccc;
-  width : 170px !important ;
 }
 .clear_button{
-  width : 170px !important ;
   background: #ffff;
   border:1px solid #cccccc;
 }
 .binary_oper{
-  width : 170px !important ;
   background:#eeeeee;
   border:1px solid #cccccc;
 }
 .unary_oper{
-  width : 170px !important ;
   background:#eeeeee;
   border:1px solid #cccccc;
 }
 .math_fun{
-  width : 170px !important ;
   background:#eeeeee;
   border:1px solid #cccccc;
 }
 .backoper_button{
-  width : 170px !important ;
   background:#eeeeee;
   border:1px solid #cccccc;
 }
 .result_button{
-  line-height:70.8px;
   background:#ff850b;
   border:1px solid #eeeeee;
 }
   .delete_button{
     background: #dc3545;
     border:1px solid #cccccc;
-    width : 170px !important ;
   }
   #radio_button{
     background: #d49ea3;
     border:1px solid #cccccc;
-    width : 170px !important ;
   }
 
 /* converter css */
 
 .converter_container{
-  padding:160px;
+  margin:auto;
+  padding:10% 0;
 }
 
 .converter_menu{
@@ -150,20 +183,22 @@ header nav{
   background-color: #dc3545;
   color:#ffffff !important;
 }
-#convert{
-  padding-left:52px;
-}
-
 #convert tr{
+  padding:0 10px;
 }
 #convert td{
   font-size:20px;
-  padding:10px 0px 0px 10px;
+  padding:10px;
 }
+.convert-table{
+  padding:10%;
+}
+.table-form{
 
+}
 .forminput{
-  width:260px;
-  padding: 8px;
+  width:90%;
+  padding: 10px;
   border: 1px solid #000;
   border-radius: 15px;
   box-shadow: 2px 2px 3px #666;
@@ -171,7 +206,9 @@ header nav{
 }
 
 .cal-select{
-  padding: 3px;
+  margin:0 10px;
+  padding:10px;
+  width:90%;
   border: 1px solid #000;
   border-radius: 4px;
   box-shadow: 2px 2px 3px #666;

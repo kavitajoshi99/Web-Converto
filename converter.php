@@ -28,27 +28,26 @@
     </div>
     <div id="convert">
       <table style="border:1px solid #000000" class="convert-table">
-        <form name="calform" method='post'></form>
         <tbody>
-          <tr>
-            <td width="300px">
+          <tr class='row'>
+            <td class='col-6'>
             <b>From:</b>
           </td>
-            <td width="300px">
+            <td class='col-6'>
               <b>To:</b>
             </td>
           </tr>
-          <tr>
-            <td>
-              <input type='text' name="fromval" style="width:250px" class="forminput input-change" id="fromfield"/>
+          <tr class='row'>
+            <td class='col-6'>
+              <input type='text' name="fromval" class="forminput input-change" id="fromfield"/>
             </td>
-            <td>
-              <input type='text' name="toval" style="width:250px" class="forminput input-change" id="tofield" readonly />
+            <td class='col-6'>
+              <input type='text' name="toval" class="forminput input-change" id="tofield" readonly />
             </td>
           </tr>
-          <tr>
-            <td style="padding-top:10px">
-              <select name="calfrom" id='calfrom' style="width:250px" class="cal-select input-change" size="7">
+          <tr class='row'>
+            <td style="padding:10px 0px" class='col'>
+              <select name="calfrom" id='calfrom' class="cal-select input-change" size='7'>
                 <option value='meter'>Meter</option>
                 <option value='km'>Kilometer</option>
                 <option value='cm'>Centimeter</option>
@@ -58,8 +57,8 @@
                 <option value='mile'>Mile</option>
               </select>
             </td>
-            <td style="padding-top:10px">
-              <select name="calto" id='calto' style="width:250px" class="cal-select input-change" size="7">
+            <td style="padding:10px 0px" class='col'>
+              <select name="calto" id='calto' class="cal-select input-change" size='7'>
                 <option value='meter'>Meter</option>
                 <option value='km'>Kilometer</option>
                 <option value='cm'>Centimeter</option>
