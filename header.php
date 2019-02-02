@@ -1,3 +1,4 @@
+
 <!DOCType html>
 <html>
   <head>
@@ -16,9 +17,6 @@
           <div class="converto">
             <div class="calculator-icon">
               <img src='images/calculator-icon.png' width='50px' height='50px'>
-            </div>
-            <div class="calculator-name">
-              WEB-CONVERTO
             </div>
           </div>
           <nav class="navbar navbar-expand-lg navbar-light frontend-navbar">

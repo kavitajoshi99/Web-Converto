@@ -47,27 +47,17 @@ header nav{
   z-index: 999;
 }
 .header{
-  height:100px;
+  height:20%;
 }
  .bg{
    background:#dc3545;
+   padding:3vh;
  }
 .converto{
   margin:auto;
 }
-.calculator-icon{
-  float:left;
-  width:50px;
-  height:50px;
-}
-.calculator-name{
-  float:right;
-  font-size: 37px;
-  color:#ffff;
-  font-family: 'Chela One', cursive;
-}
   .frontend-navbar{
-    height:100px;
+    height:20%;
   }
   .frontend-nav-link{
     padding-right: 2.5rem !important;
@@ -80,14 +70,13 @@ header nav{
     color: black !important;
   }
   .navbar_nav{
-    height: 100px;
+    height: 20%;
     float:right;
     position: relative;
   }
   .frontend-nav-item{
     height: 100%;
     position: relative;
-    line-height: 87px;
   }
 .nav_item{
   margin:10px;
